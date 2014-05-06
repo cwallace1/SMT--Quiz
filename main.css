@@ -1,0 +1,186 @@
+* {
+    line-height: 1.1em;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Lucidatypewriter, monospace;
+    color: #666666;
+    display: inline-block;
+    /*cursor: none;*/
+}
+head, script {
+    display: none;
+}
+body {
+    min-width:870px;
+}
+header {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    position: relative;
+    top: 0;
+    text-align: center;
+    padding: 25px 0;
+}
+header h1 {
+    font-size: 60px;
+}
+#container {
+    line-height: 18px;
+    position: relative;
+    width: 100%;
+    height: 425px;
+}
+#splat {
+    width: 33%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    left: 33%;
+}
+#phase, #points {
+    border: #666666 solid 1px;
+    width: 95px;
+    height: 80px;
+    background-color: #dddddd;
+    position: absolute;
+    top:20px;
+    display: inline-block;
+    padding: 15px;
+    line-height: 2em;
+}
+#phase {
+    left: 10px;
+}
+#points {
+    right: 10px;
+}
+#hitpoints {
+    width: 70px;
+    background-color: #22a844;
+    margin-left: 5px;
+}
+#lost {
+    width: 0px;
+    background-color: #a82244;
+    position: relative;
+    right: -63px;
+}
+#main {
+    width: 100%;
+}
+br {
+    clear: both;
+}
+figure {
+    margin-top: 20px;
+    width: 100%;
+    height: 450px;
+    text-align: center;
+}
+.hero {
+    width: 500px;
+    height: auto;
+}
+#taunt {
+    background-color: #666666;
+    height: auto;
+    width: 70%;
+    text-align: left;
+    padding: 15px 2%;
+    display: block;
+    position: absolute;
+    top: 335px;
+    right: 13%;
+    z-index: 1;
+}
+#taunt span, #taunt p {
+    color: #dddddd;
+    display: inline;
+    font-size: 50px;
+}
+footer {
+    background-color: #ccccdd;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    padding: 25px 0;
+    text-align: center;
+}
+footer p {
+    font-size: 30px;
+    width: 85%;
+}
+#taunt-esc {
+    height: auto;
+    width: 35px;
+    margin-left: 35px;
+}
+#choice img {
+    height: auto;
+    width: 28px;
+    margin-right: 35px;
+}
+#answers {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+#answers-left, #answers-right {
+    display: inline-block;
+    text-align: right;
+    margin-right:2%;
+}
+#answers-left {
+    width: 30%;
+}
+#answers-right {
+    width: 30%;
+}
+#answers span {
+    font-size: 32px;
+}
+@-webkit-keyframes 'blink' {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+.blink {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-direction: normal;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: blink;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-direction: normal;
+    -o-animation-duration: 2s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-name: blink;
+    -o-animation-timing-function: ease-in-out;
+    -ms-animation-direction: normal;
+    -ms-animation-duration: 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-name: blink;
+    -ms-animation-timing-function: ease-in-out;
+}
