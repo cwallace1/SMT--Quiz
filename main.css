@@ -12,7 +12,7 @@ head, script {
     display: none;
 }
 body {
-    min-width:870px;
+    width:100%;
 }
 header {
     margin: auto;
@@ -27,11 +27,63 @@ header {
 header h1 {
     font-size: 60px;
 }
+header span {
+    position: absolute;
+    right: 50px;
+    top: 54px;
+    font-size: 24px;
+    width: 181px;
+    background-color: #dddddd;
+    border: #666666 solid 1px;
+    padding: 8px;
+    border-radius: 3px;
+    color: #000000;
+    display: none;
+}
+#start {
+    position: absolute;
+    width: 100%;
+    background: #dddddd;
+    height: 620px;
+    z-index: 5;
+    text-align: center;
+    padding-top: 15px;
+}
+#start h2 {
+    display: block;
+    font-size: 50px;
+}
+#start p {
+    font-size: 28px;
+    width: 85%;
+    margin-top: 25px;
+}
+#start span {
+    font-size: 28px;
+    color: #eeaa22;
+}
 #container {
     line-height: 18px;
     position: relative;
     width: 100%;
-    height: 425px;
+}
+#sure {
+    position: absolute;
+    z-index: 2;
+    width: 44%;
+    left: 25%;
+    border: #dddddd solid 1px;
+    top: 150px;
+    text-align: center;
+    font-size: 48px;
+    padding: 115px 3%;
+    background-color: #000000;
+    color: #dddddd;
+    display: none;
+}
+#sure span {
+    font-size: 48px;
+    color: #dddddd;
 }
 #splat {
     width: 33%;
@@ -75,9 +127,7 @@ br {
     clear: both;
 }
 figure {
-    margin-top: 20px;
     width: 100%;
-    height: 450px;
     text-align: center;
 }
 .hero {
@@ -102,7 +152,7 @@ figure {
     font-size: 50px;
 }
 footer {
-    background-color: #ccccdd;
+    background-color: #dddddd;
     width: 100%;
     min-height: 200px;
     height: auto;
@@ -111,6 +161,7 @@ footer {
     bottom: 0;
     padding: 25px 0;
     text-align: center;
+    min-height:200px;
 }
 footer p {
     font-size: 30px;
@@ -183,4 +234,7 @@ footer p {
     -ms-animation-iteration-count: infinite;
     -ms-animation-name: blink;
     -ms-animation-timing-function: ease-in-out;
+}
+@media screen and (max-width: 1000px){
+    body, header, footer, #start, #container{width: 1000px;}
 }
