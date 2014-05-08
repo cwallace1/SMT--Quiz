@@ -6,7 +6,7 @@
     font-family: Lucidatypewriter, monospace;
     color: #666666;
     display: inline-block;
-    /*cursor: none;*/
+    cursor: none;
 }
 head, script {
     display: none;
@@ -23,24 +23,31 @@ header {
     top: 0;
     text-align: center;
     padding: 25px 0;
+    border-bottom: #666666 solid 5px;
 }
 header h1 {
-    font-size: 60px;
+    font-size: 50px;
 }
 header span {
     position: absolute;
     right: 50px;
-    top: 54px;
+    top: 45px;
     font-size: 24px;
     width: 181px;
     background-color: #dddddd;
-    border: #666666 solid 1px;
+    border: #666666 solid 3px;
     padding: 8px;
     border-radius: 3px;
     color: #000000;
     display: none;
 }
-#start {
+#winned {
+    font-size: 60px;
+    width: 85%;
+    color: #971515;
+    margin-top: 25px;
+}
+#start, #winner {
     position: absolute;
     width: 100%;
     background: #dddddd;
@@ -91,9 +98,10 @@ header span {
     position: absolute;
     z-index: 1;
     left: 33%;
+    top: -31px;
 }
 #phase, #points {
-    border: #666666 solid 1px;
+    border: #666666 solid 2px;
     width: 95px;
     height: 80px;
     background-color: #dddddd;
@@ -137,14 +145,15 @@ figure {
 #taunt {
     background-color: #666666;
     height: auto;
-    width: 70%;
+    width: 75%;
     text-align: left;
     padding: 15px 2%;
     display: block;
     position: absolute;
-    top: 335px;
-    right: 13%;
+    top: 368px;
+    right: 10%;
     z-index: 1;
+    border: #000000 solid 5px;
 }
 #taunt span, #taunt p {
     color: #dddddd;
@@ -162,9 +171,10 @@ footer {
     padding: 25px 0;
     text-align: center;
     min-height:200px;
+    border-top: #666666 solid 5px;
 }
 footer p {
-    font-size: 30px;
+    font-size: 26px;
     width: 85%;
 }
 #taunt-esc {
@@ -174,8 +184,8 @@ footer p {
 }
 #choice img {
     height: auto;
-    width: 28px;
-    margin-right: 35px;
+    width: 20px;
+    margin-right: 25px;
 }
 #answers {
     display: block;
@@ -195,7 +205,7 @@ footer p {
     width: 30%;
 }
 #answers span {
-    font-size: 32px;
+    font-size: 25px;
 }
 @-webkit-keyframes 'blink' {
     0% {
