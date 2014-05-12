@@ -23,25 +23,15 @@ var jumble = function demon(eyeDee, question, correct, herring1, herring2, herri
         (cuChulainn2 = new jumble("cuChulainn2", 'Cu Chulainn means "The Hound of Ulster," a title he received in honor of his bravery in battle and devotion to Ulster. What was his birth name?', "Setanta", "Lugh", "Laeg", "Conall", "images/KazumaKaneko-CuChulainn.jpg", "CU CHULAINN: By my strength, this spear will not let you pass!", "hard")),
         (mizuchi1 = new jumble("mizuchi1", "The Mizuchi is a snake-like Japanese water spirit or water dragon. Which of these is also a Japanese water spirit?", "Kappa", "Nozuchi", "Kodama", "Orochi", "images/Mizuchi.jpg", "MIZUCHI: I HAVE NO TIME FOR WEAK MORTALS! DROWN IN MY GULLET!", "easy")),
         (mizuchi2 = new jumble("mizuchi2", "The Mizuchi's Chinese name signifies a race of dragons, while its Japanese name means 'aquatic spiritual power'. The Mizuchi were said to take over and rule any lake containing, what?", "2,600 fish", "Bodies of the Innocent", "Underwater Lava Vents", "Limestone Caves", "images/Mizuchi.jpg", "MIZUCHI: I HAVE NO TIME FOR WEAK MORTALS! DROWN IN MY GULLET!", "hard")),
-        (yggdrasil1 = new jumble("yggdrasil1", "The Yggdrasil is known as the World Tree in Norse Mythology, but what kind of tree is it?", "Ash Tree", "Yew Tree", "Oak Tree", "Fir Tree", "images/KazumaKaneko-Yggdrasil.jpg", "YGGDRASIL: Eternal Life?! You seek eternal life?!? I AM eternal life!", "easy")),
-        (yggdrasil2 = new jumble("yggdrasil2", "The Yggdrasil has three roots that sustain it and hold it up. Which of these homeworlds does not have a root of the Yggdrasil?", "Alfheimr", "Jotunheimr", "Asgardr", "Helheimr", "images/KazumaKaneko-Yggdrasil.jpg", "YGGDRASIL: Eternal Life?! You seek eternal life?!? I AM eternal life!", "hard")),
-        (tarasque1 = new jumble("tarasque1", "The Tarasque was a sort of dragon with six short legs like a bear's, a lion's head, an oxen's body covered by a turtle shell, and a scaly tail with a scorpion's sting. What would calm it down?", "Beautiful Singing", "Eating 30 Sheep", "Petting its Mane", "Sound of Rainfall", "images/KazumaKaneko-Tarasque.jpg", "TARASQUE: YOU HUMANS AND YOUR CEASELESS PRATTLE GRATES ON MY EARS! PREPARE TO BE SILENCED!", "easy")),
+        (yggdrasil1 = new jumble("yggdrasil1", "The Yggdrasil is known as the World Tree in Norse Mythology, but what kind of tree is it?", "Ash Tree", "Yew Tree", "Oak Tree", "Fir Tree", "images/KazumaKaneko-Yggdrasil.jpg", "YGGDRASIL: You seek eternal life?!? I AM eternal life!", "easy")),
+        (yggdrasil2 = new jumble("yggdrasil2", "The Yggdrasil has three roots that sustain it and hold it up. Which of these homeworlds does not have a root of the Yggdrasil?", "Alfheimr", "Jotunheimr", "Asgardr", "Helheimr", "images/KazumaKaneko-Yggdrasil.jpg", "YGGDRASIL: You seek eternal life?!? I AM eternal life!", "hard")),
+        (tarasque1 = new jumble("tarasque1", "The Tarrasque was a sort of dragon with six short legs like a bear's, an ox-like body covered with a turtle shell, and a scaly tail that ended in a scorpion's sting. It had a lion's head. What would calm it down?", "Beautiful Singing", "Eating 30 Sheep", "Petting its Mane", "Sound of Rainfall", "images/KazumaKaneko-Tarasque.jpg", "TARASQUE: YOU HUMANS AND YOUR CEASELESS PRATTLE GRATES ON MY EARS! PREPARE TO BE SILENCED!", "easy")),
         (tarasque2 = new jumble("tarasque2", "The city of Tarascon is named after the Tarasque after a local nun was able to calm the beast before it was slain by the townsfolk still afraid of it. What country is Tarascon in?", "France", "Italy", "Spain", "Greece", "images/KazumaKaneko-Tarasque.jpg", "TARASQUE: YOU HUMANS AND YOUR CEASELESS PRATTLE GRATES ON MY EARS! PREPARE TO BE SILENCED!", "hard")),
         (samael1 = new jumble("samael1", "Samael means 'Poison of God,' and he is the Angel of Death. Most texts declare that Samael married Lilith after she was cast out of the Garden of Eden. What are their children called?", "Lilim", "Succubi", "Fomorians", "Manticores", "images/KazumaKaneko-Samael.jpg", "SAMAEL: I am Samael. Know me, for I am the taker of the souls of men. I have come now to fetch YOURS.", "easy")),
         (samael2 = new jumble("samael2", "According to some myths, Samael was mated with Eisheth Zenunim, Na'amah, Lilith and Agrat Bat Mahlat. All were 'angels' of sacred prostitution except for this one.", "Lilith", "Agrat Bat Mahlat", "Eisheth Zenunim", "Na'amah", "images/KazumaKaneko-Samael.jpg", "SAMAEL: I am Samael. Know me, for I am the taker of the souls of men. I have come now to fetch YOURS.", "hard")),
-        (yaksini1 = new jumble("yaksini1", "Yaksini are the female yaksha, and they attend to Kubera, the Hindu god of wealth. Although generally benevolent, Yaksini are credited with the creation of what malevolent group?", "Vampires", "Werewolves", "Goblins", "Trolls", "images/KazumaKaneko-Yaksini.jpg", "YAKSINI: What do we have here? You look entertaining. Care for a dance?", "easy")),
+        (yaksini1 = new jumble("yaksini1", "Yaksini are the female counterparts of the male yaksha, and they both attend to Kubera, the Hindu god of wealth. Although Yaksini are generally benevolent, they are credited with the creaton of what malevolent group?", "Vampires", "Werewolves", "Goblins", "Trolls", "images/KazumaKaneko-Yaksini.jpg", "YAKSINI: What do we have here? You look entertaining. Care for a dance?", "easy")),
         (jackFrost1 = new jumble("jackFrost1", "This adorable rendition of Jack Frost has become the well received face of the Shin Megami Tensei empire. What is his catchphrase in English?", "Hee-ho!", "I'm Jack Frost!", "Let's Play!", "It'll Be Fun!", "images/KazumaKaneko-JackFrost.jpg", "JACK FROST: Hee-ho! I'm Jack Frost! Let's play! It'll be fun!", "easy")),
-        (cockatrice1 = new jumble("cockatrice1", "The cockatrice is the feared offspring of a rooster and a snake that could turn people to stone by meeting their eyes. Which of these creatures supposedly turned their prey to stone to eat them?", "Basilisk", "Cockatrice", "Gorgon", "Svartalfar", "images/KazumaKaneko-Cockatrice.jpg", "COCKATRICE: BWACK BWACK BWACK! HISSSSSS! BWACK! BWACK! COCK-A-DOODLE-HISSSSSS!", "easy")),
-        (gurr1 = new jumble("gurr1", "Gurr is an evil and carnivorous giant eagle that feeds on flesh. It is widely believed that Gurr is a demonization of which lesser deity from Hinduism?", "Garuda", "Ganga", "Rudra", "Varuna", "images/KazumaKaneko-Gurr.jpg", "GURR: So hungry... Wait. That scent... You have... Could it be?! FLESH!!!", "easy")),
-        (yaka1 = new jumble("yaka1", "In Sri Lankan myth, Yakas are the source of sickness and disease. They can be summoned and exorcised while wearing a Yaka mask and performing which kind of ritual?", "Dance", "Prayer", "Sacrificial", "Sexual", "images/KazumaKaneko-Yaka.jpg", "YAKA: LOOK INTO MY EYES AND YOU SHALL SEE THE PLAGUE THAT AWAITS YOU! *cough cough*", "easy")),
-        (turdak1 = new jumble("turdak1", "In Hindu myth, it is Turdak's job to haul the souls of the unworthy to the proper level of Hell after his master, Yama, passes judgment. In Tibetan lore, Yama gave Turdak power over what?", "Illness", "Vultures", "Collecting Souls", "Flowing Water", "images/KazumaKaneko-Turdak.jpg", "TURDAK: Yama has judged you. He has deemed you unworthy for Nirvana. Come with me.", "easy")),
-        (sanniYaka1 = new jumble("sanniYaka1", "In Sri Lankan myth, Yakas are the source of sickness and disease. Yakas all attend to their king, Wakahola Sanni Yaka, who rules over how many diseases?", "18", "7", "14", "83", "images/KazumaKaneko-SanniYaka.jpg", "WAKAHOLA SANNI YAKA: COME TO ME MY CHILDREN! WE SHALL DEVOUR THIS MORTAL WHO KNOWS NO RESPECT FOR YOUR KING!", "hard")),
-        (wendigo1 = new jumble("wendigo1", "A demonic half-beast creature appearing in the legends of the Algonquian peoples, Wendigo are embodiments of gluttony, greed, excess. Humans that became Wendigos had committed what taboo?", "Cannibalism", "Hoarding Resources", "Over-Eating", "Abandoning Family", "images/KazumaKaneko-Wendigo.jpg", "WENDIGO: soooo hungry... i need more... soooo hungry... take me to your tribe so i might feast...", "easy")),
-        (quetzalcoatl1 = new jumble("quetzalcoatl1", "Quetzalcoatl was regarded as the god of water, wind, and the harvest, and the god who gave man fire. His efforts to get people to stop making human sacrifices earned the wrath of the war god, Tezcatlipoca, who banished him to which planet?", "Mars", "Venus", "Saturn", "Jupiter", "images/KazumaKaneko-Quetzalcoatl.jpg", "QUETZALCOATL: Mortals seem to have forgotten that gifts are all around them. Perhaps it is time for another purge.", "hard")),
-        (quetzalcoatl2 = new jumble("quetzalcoatl2", "Quetzalcoatl was regarded as the god of water, wind, and the harvest, and the god who gave man fire. He created humans by sprinkling blood on the bones of people from a previously created world, but which planet is regarded as his heart?", "Venus", "Mars", "Saturn", "Jupiter", "images/KazumaKaneko-Quetzalcoatl.jpg", "QUETZALCOATL: Mortals seem to have forgotten that gifts are all around them. Perhaps it is time for another purge.", "hard")),
-        (nyarlathotep1 = new jumble("nyarlathotep1", "The most active of the Outer Gods from H.P. Lovecraft's writings, Nyarlathotep is constantly sowing discord and madness everywhere he pleases. Which Lovecraftian deity is his father?", "Azathoth", "Yog-Sothoth", "Shub-Niggurath", "Tsathoggua", "images/KazumaKaneko-Nyarlathotep.jpg", "NYARLATHOPEP: You seek to defeat me? Hahahaha, It won't be easy, I have a thousand more forms after this one!", "hard")),
-        (nyarlathotep2 = new jumble("nyarlathotep2", "It is claimed that Nyarlathotep has 1000 forms or Masks, and each has its own distinct personality. Which of these is not a Mask?", "Devourer in the Mists", "Bloated Woman", "Haunter of the Dark", "Mr. Skin", "images/KazumaKaneko-Nyarlathotep.jpg", "NYARLATHOPEP: You seek to defeat me? Hahahaha, It won't be easy, I have a thousand more shapes after this one!", "hard")),
-        (kraken1 = new jumble("kraken1", "Easily recognizable in almost all cultures nowadays, the Kraken is an undersea horror capable of reducing large ships to splinters. What sort of language does the word Kraken come from?", "Germanic", "Romanic", "Celtic", "Slavic", "images/KazumaKaneko-Kraken.jpg", "KRAKEN: *gurgle* *splash* *splash* *shriek* *splash* *gurgle* *splash*", "easy"))
+        (cockatrice1 = new jumble("cockatrice1", "The cockatrice is the feared offspring of a rooster and a snake that could turn people to stone by meeting their eyes. Which of these creatures supposedly turned their prey to stone to eat them?", "Basilisk", "Cockatrice", "Gorgon", "Svartalfar", "images/KazumaKaneko-Cockatrice.jpg", "COCKATRICE: BWACK BWACK BWACK! HISSSSSS! BWACK! BWACK! COCK-A-DOODLE-HISSSSSS!", "easy"))
         ],
 //holy fishcakes batman! that was alot of data!
 //here come some flags, counters and other
@@ -54,11 +44,9 @@ var jumble = function demon(eyeDee, question, correct, herring1, herring2, herri
     sureFlag = false,
     winned = false,
     waneFlag = true,
-    paused = false,
     hardFlag = "easy",
     floorCounter = 0,
     hiscore = 0,
-    score = 0,
     magnetite = 0,
     setHP = 0,
     spot = 1,
@@ -81,18 +69,12 @@ function startMenu() {
     $("#start").show();
     $(document).unbind("keydown");
     $(document).keydown(function(e){
-        if (paused === false && !sureFlag && e.which == 13) {
+        if (!sureFlag && e.which == 13) {
             $("#newGame").show();
             letsMove();
             pickIt();
             moonIf();
             $("#start").hide();
-        }
-        else if (paused === true && e.which == 13) {
-            $("#newGame").show();
-            $("#start").hide();
-            paused = false;
-            letsMove();
         }
     });
 }
@@ -103,15 +85,11 @@ function letsMove() {
     $(document).unbind("keydown");
     $(document).keydown(function(e){
         e.preventDefault();
-        if (!paused && !sureFlag && e.which == 9) {
+        if (!sureFlag && e.which == 9) {
             sureResetAll();
             $("#sure").show();
             $("#choice").hide();
             sureFlag = true;
-        }
-        if (e.which == 27 && !paused) {
-            paused = true;
-            startMenu();
         }
         if (!tauntFlag && !sureFlag  && e.which == 37 || e.which == 65) move("left");
         else if (!tauntFlag && !sureFlag && e.which == 39 || e.which == 68) move("right");
@@ -187,7 +165,7 @@ function makeChoice() {
     else if (hardFlag === "hard") difficultyMod = 2000;
     located = $("#choice").next("span").hasClass(order);
     diffTimer = difficultyMod -Math.ceil((diffTimer - pointTimer)/20);
-    if (diffTimer < 100) diffTimer = (difficultyMod/10);
+    if (diffTimer < 100) diffTimer = 100;
     if (located === true) {
         magnetite += diffTimer;
         $("#mag").text("MAG "+magnetite);
@@ -313,7 +291,12 @@ function sureCancel() {
 //a hiscore if you did! try to beat it!
 //dont worry, it wont reset!
 function resetAll() {
-    if (winned === true) $("#hiscore").show();
+    if (winned === true) {
+        $("#hiscore").show();
+        var score = ((setHP/10)*magnetite);
+        if (score > hiscore) hiscore = score;
+        $("#hiscore").html("Hiscore:<br/>HP "+(100-(setHP*10))+"%<br/>MAG "+magnetite);
+    }
     var len = askedArray.length;
     while (len--) {
         askedArray.shift();
@@ -372,15 +355,10 @@ function moonIf() {
 function youWin() {
     dead = true;
     winned = true;
-    score = Math.round(((10-setHP)/10)*magnetite);
-    if (score > hiscore) {
-        hiscore = score;
-        $("#hiscore").html("Hiscore:<br/>HP "+(100-(setHP*10))+"%<br/>MAG "+magnetite);
-    }
-    $("#winner").show();
-    $("#winned").text("You did it! Your remaining Lifeforce was "+(100-(setHP*10))+"% and you earned "+magnetite+" Magnetite for confronting your demons! Well Done! Press 'Enter' to Conquer Again...");
     $(document).unbind("keydown");
     $(document).keydown(function(e){
         if (e.which == 13) resetAll();
     });
+    $("#winner").show();
+    $("#winned").text("You did it! Your remaining Lifeforce was "+(100-(setHP*10))+"% and you earned "+magnetite+" Magnetite for confronting your demons! Well Done! Press 'Enter' to Conquer Again...");
 }

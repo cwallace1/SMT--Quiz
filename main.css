@@ -41,6 +41,10 @@ header span {
     color: #000000;
     display: none;
 }
+#hiscore {
+    left: 50px;
+    top: 32px;
+}
 #winned {
     font-size: 60px;
     width: 85%;
@@ -61,12 +65,12 @@ header span {
     font-size: 50px;
 }
 #start p {
-    font-size: 28px;
+    font-size: 26px;
     width: 85%;
     margin-top: 25px;
 }
 #start span {
-    font-size: 28px;
+    font-size: 26px;
     color: #eeaa22;
 }
 #container {
