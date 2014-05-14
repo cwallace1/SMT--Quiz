@@ -207,11 +207,9 @@ footer p {
     text-align: right;
     margin-right:2%;
 }
-#answers-left {
+#answers-left, #answers-right {
     width: 30%;
-}
-#answers-right {
-    width: 30%;
+    min-width: 375px;
 }
 #answers span {
     font-size: 25px;
