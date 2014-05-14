@@ -198,8 +198,8 @@ function makeChoice() {
     if (hardFlag === "easy") difficultyMod = 1000;
     else if (hardFlag === "hard") difficultyMod = 2000;
     located = $("#choice").next("span").hasClass(order);
-    diffTimer = difficultyMod -Math.ceil((diffTimer - pointTimer)/20);
-    if (diffTimer < 100) diffTimer = (difficultyMod/10);
+    diffTimer = difficultyMod -Math.ceil((diffTimer - pointTimer)/30);
+    if (diffTimer < difficultyMod/10) diffTimer = (difficultyMod/10);
     if (located === true) {
         magnetite += diffTimer;
         $("#mag").text("MAG "+magnetite);
