@@ -150,6 +150,8 @@ figure {
     background-color: #666666;
     height: auto;
     width: 75%;
+    min-width: 750px;
+    min-height: 200px;
     text-align: left;
     padding: 15px 2%;
     display: block;
@@ -162,7 +164,7 @@ figure {
 #taunt span, #taunt p {
     color: #dddddd;
     display: inline;
-    font-size: 50px;
+    font-size: 48px;
 }
 footer {
     background-color: #dddddd;
