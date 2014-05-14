@@ -377,7 +377,7 @@ function moonIf() {
     else if (moonCount === 8) phase = "FULL MOON";
     else {phase = moonCount+"/8 MOON";}
     $("#moon").text(phase);
-    currentFloor ++;
+    currentFloor = 652 + floorCounter;
     $("#floor").text("B"+currentFloor);
 }
 //those that reach down 15 floors win. i

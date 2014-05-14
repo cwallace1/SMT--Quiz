@@ -51,6 +51,9 @@ header span {
     color: #971515;
     margin-top: 25px;
 }
+#start {
+    border-bottom: #666666 solid 5px;
+}
 #start, #winner {
     position: absolute;
     width: 100%;
