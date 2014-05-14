@@ -169,15 +169,15 @@ figure {
 footer {
     background-color: #dddddd;
     width: 100%;
-    min-height: 200px;
     height: auto;
     display: inline-block;
     position: relative;
     bottom: 0;
     padding: 25px 0;
     text-align: center;
-    min-height:200px;
+    min-height: 200px;
     border-top: #666666 solid 5px;
+    border-bottom: #666666 solid 5px;
 }
 footer p {
     font-size: 26px;
