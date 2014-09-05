@@ -101,6 +101,7 @@ header span {
 }
 #splat {
     width: 415px;
+    display: none;
     height: auto;
     position: absolute;
     z-index: 1;
@@ -213,6 +214,7 @@ footer p {
 }
 #answers span {
     font-size: 25px;
+    line-height: 1.25em;
 }
 @-webkit-keyframes 'blink' {
     0% {

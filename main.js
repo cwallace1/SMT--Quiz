@@ -232,24 +232,26 @@ function hpMode() {
 // dead. don't dead! the popup not worth it!
 function splatIt(splat) {
     askedArray[askedArray.length] = whichOne;
+    var splatter;
     if (splat === true) {
-        $("#splat").attr("src", "images/beaten.png");
-        splatFlag = true;
+        splatter= "beaten.png";
     }
     else if (splat === 2) {
-        $("#splat").attr("src", "images/deaded.png");
-        splatFlag = true;
+        splatter= "deaded.png";
     }
     else if (splat === false) {
-        $("#splat").attr("src", "images/conquered.png");
-        splatFlag = true;
+        splatter = "conquered.png";
     }
+    $("#splat").attr("src", "images/"+splatter);
+    $("#splat").toggle();
+    splatFlag = true;
 }
 //closes splat popup and increments the
 //internal floor counter. if you reach
 //the 15th floor, you win!
 function closeSplat(){
     $("#splat").attr("src", "");
+    $("#splat").toggle();
     spot = 1;
     spotRemoval();
     if (!dead) {
