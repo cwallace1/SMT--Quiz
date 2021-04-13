@@ -384,9 +384,7 @@ function moonIf() {
     currentFloor = 652 + floorCounter;
     $("#floor").text("B"+currentFloor);
 }
-//those that reach down 15 floors win. i
-//lied though... you die after floor 15 o,o
-//JK! its just so you cant keep going :P
+//those that reach down 15 floors win
 function youWin() {
     $(document).unbind("keydown");
     $(document).keydown(function(e){

@@ -1,0 +1,421 @@
+{
+      "creature": 
+      [{
+            "name": "cthulhu",
+            "img": "images/KazumaKaneko-Cthulu.jpg",
+            "quote": "PH'NGLUI MGLW'NAFH CTHULHU R'LYEH WGAH'NAGL FHTAGN!!!",
+            "easy": {
+                  "q": "While Cthulhu has been greatly popularized by many modern games, what story started it all?",
+                  "a": "Call of Cthulhu",
+                  "h1": "The Hobbit",
+                  "h2": "Harry Potter",
+                  "h3": "Necronomicon"
+            },
+            "hard" : {
+                  "q": "Cthulhu was the brain child of H.P. Lovecraft, but among this selection of his works, which did not mention Cthulhu?",
+                  "a": "Dagon",
+                  "h1": "The Dunwich Horror",
+                  "h2": "Whisperer in Darkness",
+                  "h3": "Mountains of Madness"
+            }
+      },{
+            "name": "arachne",
+            "img": "images/KazumaKaneko-Arachne.jpg",
+            "quote": "Fufufufu... Look what has wandered into my web... Let's wrap this up quickly!",
+            "easy": {
+                  "q": "Arachne claimed she was the best at her profession and challenged the goddess Athena to a contest over the title. What was Arachne??",
+                  "a": "Weaver",
+                  "h1": "Poet",
+                  "h2": "Tactician",
+                  "h3": "Baker"
+            },
+            "hard" : {
+                  "q": "After losing to Athena in the contest, Arachne hung herself. Athena, moved to 'mercy,' gave her life, but used this goddess' potion to curse Arachne to share the form of a spider and weave for all time.",
+                  "a": "Hecate",
+                  "h1": "Styx",
+                  "h2": "Selene",
+                  "h3": "Aphrodites"
+            }
+      }, {
+            "name": "cu chulainn",
+            "img": "images/KazumaKaneko-CuChulainn.jpg",
+            "quote": "By my strength, this spear will not let you pass!",
+            "easy": {
+                  "q": "Cu Chulainn means \"The Hound of Ulster,\" a title he received in honor of his bravery in battle and devotion to Ulster. Where did his story originate?",
+                  "a": "Ireland",
+                  "h1": "Gaul",
+                  "h2": "Wales",
+                  "h3": "England"
+            },
+            "hard" : {
+                  "q": "Cu Chulainn means \"The Hound of Ulster,\" a title he received in honor of his bravery in battle and devotion to Ulster. What was his birth name?",
+                  "a": "Setanta",
+                  "h1": "Lugh",
+                  "h2": "Laeg",
+                  "h3": "Conall"
+            }
+      }, {
+            "name": "mizuchi",
+            "img": "images/Mizuchi.jpg",
+            "quote": "I HAVE NO TIME FOR WEAK MORTALS! DROWN IN MY GULLET!",
+            "easy": {
+                  "q": "The Mizuchi is a snake-like Japanese water spirit or water dragon. Which of these is also a Japanese water spirit?",
+                  "a": "Kappa",
+                  "h1": "Nozuchi",
+                  "h2": "Kodama",
+                  "h3": "Orochi"
+            },
+            "hard" : {
+                  "q": "The Mizuchi's Chinese name signifies a race of dragons, while its Japanese name means 'aquatic spiritual power'. The Mizuchi were said to take over and rule any lake containing, what?",
+                  "a": "2,600 fish",
+                  "h1": "Bodies of the Innocent",
+                  "h2": "Underwater Lava Vents",
+                  "h3": "Limestone Caves"
+            }
+      },{
+            "name": "yggdrasil",
+            "img": "images/KazumaKaneko-Yggdrasil.jpg",
+            "quote": "Eternal Life?! You seek eternal life?!? I AM eternal life!",
+            "easy": {
+                  "q": "The Yggdrasil is known as the World Tree in Norse Mythology, but what kind of tree is it?",
+                  "a": "Ash Tree",
+                  "h1": "Yew Tree",
+                  "h2": "Oak Tree",
+                  "h3": "Fir Tree"
+            },
+            "hard" : {
+                  "q": "The Yggdrasil has three roots that sustain it and hold it up. Which of these homeworlds does not have a root of the Yggdrasil?",
+                  "a": "Alfheimr",
+                  "h1": "Jotunheimr",
+                  "h2": "Asgardr",
+                  "h3": "Helheimr"
+            }
+      },{
+            "name": "tarasque",
+            "img": "images/KazumaKaneko-Tarasque.jpg",
+            "quote": "YOU HUMANS AND YOUR CEASELESS PRATTLE GRATES ON MY EARS! PREPARE TO BE SILENCED!",
+            "easy": {
+                  "q": "The Tarasque was a sort of dragon with six short legs like a bear's, a lion's head, an oxen's body covered by a turtle shell, and a scaly tail with a scorpion's sting. What would calm it down?",
+                  "a": "Beautiful Singing",
+                  "h1": "Eating 30 Sheep",
+                  "h2": "Petting its Mane",
+                  "h3": "Sound of Rainfall"
+            },
+            "hard" : {
+                  "q": "The city of Tarascon is named after the Tarasque after a local nun was able to calm the beast before it was slain by the townsfolk still afraid of it. What country is Tarascon in?",
+                  "a": "France",
+                  "h1": "Italy",
+                  "h2": "Spain",
+                  "h3": "Greece"
+            }
+      },{
+            "name": "samael",
+            "img": "images/KazumaKaneko-Samael.jpg",
+            "quote": "I am Samael. Know me, for I am the taker of the souls of men. I have come now to fetch YOURS.",
+            "easy": {
+                  "q": "Samael means 'Poison of God,' and he is the Angel of Death. Most texts declare that Samael married Lilith after she was cast out of the Garden of Eden. What are their children called?",
+                  "a": "Lilim",
+                  "h1": "Succubi",
+                  "h2": "Fomorians",
+                  "h3": "Manticores"
+            },
+            "hard" : {
+                  "q": "According to some myths, Samael was mated with Eisheth Zenunim, Na'amah, Lilith and Agrat Bat Mahlat. All were 'angels' of sacred prostitution except for this one.",
+                  "a": "Lilith",
+                  "h1": "Agrat Bat Mahlat",
+                  "h2": "Eisheth Zenunim",
+                  "h3": "Na'amah"
+            }
+      },{
+            "name": "yakshini",
+            "img": "images/KazumaKaneko-Yaksini.jpg",
+            "quote": "What do we have here? You look entertaining. Care for a dance?",
+            "easy": {
+                  "q": "Yakshinis are nature spirits in Hindu, Buddhist, and Jain mythologies that are different from gods and demons. Although generally benevolent, Yakshini are credited with the creation of what malevolent group?",
+                  "a": "Vampires",
+                  "h1": "Werewolves",
+                  "h2": "Goblins",
+                  "h3": "Trolls"
+            },
+            "hard" : {
+                  "q": "Yakshini are the female yaksha, and they attend to Kubera, the Hindu god of wealth. What sort of place are yaksha and yakshini most likely to inhabit?",
+                  "a": "Sacred Groves",
+                  "h1": "Cemeteries",
+                  "h2": "Marketplaces",
+                  "h3": "Palaces"
+            }
+      },{
+            "name": "jack frost",
+            "img": "images/KazumaKaneko-JackFrost.jpg",
+            "quote": "Hee-ho! I'm Jack Frost! Let's play! It'll be fun!",
+            "easy": {
+                  "q": "This adorable rendition of Jack Frost has become the well received face of the Shin Megami Tensei empire. What is his catchphrase in English?",
+                  "a": "Hee-ho!",
+                  "h1": "I'm Jack Frost!",
+                  "h2": "Let's Play!",
+                  "h3": "It'll Be Fun!"
+            },
+            "hard" : {
+                  "q": "While the earliest reference to Jack Frost in literature is in the book 'Round About Our Coal Fire, or Christmas Entertainments' published in 1734, Hellen Keller wrote a book about Jack Frost in 1891. What was the title of the book?",
+                  "a": "The Frost King",
+                  "h1": "The Frost Fairies",
+                  "h2": "Little Jack Frost",
+                  "h3": "The Stranger"
+            }
+      },{
+            "name": "cockatrice",
+            "img": "images/KazumaKaneko-Cockatrice.jpg",
+            "quote": "BWACK BWACK BWACK! HISSSSSS! BWACK! BWACK! COCK-A-DOODLE-HISSSSSS!",
+            "easy": {
+                  "q": "The Cockatrice is the feared offspring of a rooster and a snake that could turn people to stone by meeting their eyes. Which of these creatures supposedly turned their prey to stone to eat them?",
+                  "a": "Basilisk",
+                  "h1": "Cockatrice",
+                  "h2": "Gorgon",
+                  "h3": "Svartalfar"
+            },
+            "hard" : {
+                  "q": "The legend of the cockatrice has a possible Egyptian folk root; the eggs of a specific bird were regularly destroyed for fear that the venom of the snakes they consumed would cause a hybrid snake-bird to hatch. What bird's eggs were targeted?",
+                  "a": "Ibis",
+                  "h1": "Raven",
+                  "h2": "Spotted Eagle",
+                  "h3": "Ostrich"
+            }
+      },{
+            "name": "gurr",
+            "img": "images/KazumaKaneko-Gurr.jpg",
+            "quote": "So hungry... Wait. That scent... You have... Could it be?! FLESH!!!",
+            "easy": {
+                  "q": "Gurr is a Sri Lankan demonization of a certain Hindu god. Hindu gods are thought of as evil spirits and are considered what in Sri Lanka?",
+                  "a": "Rakshasa",
+                  "h1": "Ghouls",
+                  "h2": "Vampires",
+                  "h3": "Yaka"
+            },
+            "hard" : {
+                  "q": "Gurr is an evil and carnivorous giant eagle that feeds on flesh. It is widely believed that Gurr is a demonization of which lesser deity from Hinduism?",
+                  "a": "Garuda",
+                  "h1": "Ganga",
+                  "h2": "Rudra",
+                  "h3": "Varuna"
+            }
+      },{
+            "name": "quetzalcoatl",
+            "img": "images/KazumaKaneko-Quetzalcoatl.jpg",
+            "quote": "Mortals seem to have forgotten the gifts all around them. Perhaps its time for another purge.",
+            "easy": {
+                  "q": "Quetzalcoatl was regarded as the god of water, wind, and the harvest, and the god who gave man fire. His efforts to get people to stop making human sacrifices earned the wrath of the war god, Tezcatlipoca, who banished him to which planet?"",
+                  "a": "Mars"",
+                  "h1": "Venus"",
+                  "h2": "Saturn"",
+                  "h3": "Jupiter""
+            },
+            "hard" : {
+                  "q": "Quetzalcoatl was regarded as the god of water, wind, and the harvest, and the god who gave man fire. He created humans by sprinkling blood on the bones of people from a previously created world, but which planet is regarded as his heart?",
+                  "a": "Venus",
+                  "h1": "Mars",
+                  "h2": "Saturn",
+                  "h3": "Jupiter"
+            }
+      },{
+            "name": "nyarlathotep",
+            "img": "images/KazumaKaneko-Nyarlathotep.jpg",
+            "quote": "You seek to defeat me? Hahahaha, It won't be easy, I have a thousand more forms after this one!",
+            "easy": {
+                  "q": "The most active of the Outer Gods from H.P. Lovecraft's writings, Nyarlathotep is constantly sowing discord and madness everywhere he pleases. Which Lovecraftian deity is his father?",
+                  "a": "Azathoth",
+                  "h1": "Yog-Sothoth",
+                  "h2": "Shub-Niggurath",
+                  "h3": "Tsathoggua"
+            },
+            "hard" : {
+                  "q": "It is claimed that Nyarlathotep has 1000 forms or Masks, and each has its own distinct personality. Which of these is not a Mask?",
+                  "a": "Devourer in the Mists",
+                  "h1": "Bloated Woman",
+                  "h2": "Haunter of the Dark",
+                  "h3": "Mr. Skin"
+            }
+      },{
+            "name": "loa",
+            "img": "images/KazumaKaneko-Loa.jpg",
+            "quote": "You! Yeah, You! You must be the new dead guy. Come on, I'll show ya round.",
+            "easy": {
+                  "q": "In Haitian mythology, a Loa is an intermediary spirit between God and humans, not dissimilar from saints and angels in Catholisicm. To beseech a Loa to carry a message or accomplish a miracle, what must be done?",
+                  "a": "Servitude",
+                  "h1": "Prayer",
+                  "h2": "Worship",
+                  "h3": "Singing"
+            },
+            "hard" : {
+                  "q": "In Haitian mythology, the Ghede Loa are spirits of the dead. Their graveyard leader is portrayed in many modern aspects, but what is his most common name?",
+                  "a": "Baron Samedi",
+                  "h1": "Ghede Babaco",
+                  "h2": "Baron Kriminel",
+                  "h3": "Ghede Nibo"
+            }
+      },{
+            "name": "choronzon",
+            "img": "images/KazumaKaneko-Choronzon.jpg",
+            "quote": "I AM I! I AM I! I AM I! I AM I! I AM I! I AM I! I AM I! I AM I! I AM I! I AM I!",
+            "easy": {
+                  "q": "Choronzon is known as the 'Abyss,' a formless aggregation of consciousness. It guards the door to all the knowledge of the cosmos. Which sorcerer supposedly summoned Choronzon?",
+                  "a": "Aleister Crowley",
+                  "h1": "Edward Kelley",
+                  "h2": "John Dee",
+                  "h3": "Faust"
+            },
+            "hard" : {
+                  "q": "Otherwise known as the Demon of Dispersion, Thelemites believe Choronzon to be the last great obstacle between the adept and enlightenment. His function is to destroy which part of the adept?",
+                  "a": "Ego",
+                  "h1": "Personality",
+                  "h2": "Memories",
+                  "h3": "Sanity"
+            }
+      },{
+            "name": "baphomet",
+            "img": "images/Baphomet.jpg",
+            "quote": "I believe in the Serpent and the Lion, Mystery of Mystery, in MY name, Baphomet.",
+            "easy": {
+                  "q": "The King of Demons, Baphomet is known as the 'Sabbatic Goat.' He has the power to control all human women, and is said to give what group their power?",
+                  "a": "Witches",
+                  "h1": "Templars",
+                  "h2": "Doctors",
+                  "h3": "Illuminati"
+            },
+            "hard" : {
+                  "q": "Since 1856, the name Baphomet has been associated with a 'Sabbatic Goat' image drawn by Eliphas Levi, which contains binary elements representing the 'sum total of the universe'. Which group has adopted Baphomet as a symbol?",
+                  "a": "Church of Satan",
+                  "h1": "Luciferian Church",
+                  "h2": "Gnostic Church",
+                  "h3": "Hermetic Order"
+            }
+      },{
+            "name": "alice",
+            "img": "images/KazumaKaneko-Alice.jpg",
+            "quote": "Oh! You're new! Let's play with my dollies! I'll be red, you'll be dead!",
+            "easy": {
+                  "q": "Though popularized by the novel \"Alice In Wonderland,\" Alice has an older, darker story which was used to scare children. In which region would she visit and kill children at night so that they would become \"friends?\"",
+                  "a": "Scandinavia",
+                  "h1": "Russia",
+                  "h2": "Britannia",
+                  "h3": "Iberia"
+            },
+            "hard" : {
+                  "q": "Alice was a young girl with immense magical powers gifted to her by demons. When she died, she was resurrected as a spirit by her \"uncles\": the Count in Red, Belial, and the Baron in Black. Who was the Baron in Black?",
+                  "a": "Nebiros",
+                  "h1": "Seth",
+                  "h2": "Moloch",
+                  "h3": "Bael"
+            }
+      },{
+            "name": "turdak",
+            "img": "images/KazumaKaneko-Turdak.jpg",
+            "quote": "Yama has judged you. He has deemed you unworthy for Nirvana. Come with me.",
+            "easy": {
+                  "q": "In Hindu myth, it is Turdak's job to haul the souls of the unworthy to the proper level of Hell after his master, Yama, passes judgment. In Tibetan lore, Yama gave Turdak power over what?",
+                  "a": "Illness",
+                  "h1": "Vultures",
+                  "h2": "Collecting Souls",
+                  "h3": "Flowing Water"
+            },
+            "hard" : {
+                  "q": "",
+                  "a": "",
+                  "h1": "",
+                  "h2": "",
+                  "h3": ""
+            }
+      }
+
+
+
+"sanniYaka1",
+"In Sri Lankan myth, Yakas are the source of sickness and disease. Yakas all attend to their king, Wakahola Sanni Yaka, who rules over how many diseases?",
+"18",
+"7",
+"14",
+"83",
+"images/KazumaKaneko-SanniYaka.jpg",
+"WAKAHOLA SANNI YAKA: COME TO ME MY CHILDREN! WE SHALL DEVOUR THIS MORTAL WHO KNOWS NO RESPECT FOR YOUR KING!",
+"hard"
+
+"wendigo1",
+"A demonic half-beast creature appearing in the legends of the Algonquian peoples, Wendigo are embodiments of gluttony, greed, excess. Humans that became Wendigos had committed what taboo?",
+"Cannibalism",
+"Hoarding Resources",
+"Over-Eating",
+"Abandoning Family",
+"images/KazumaKaneko-Wendigo.jpg",
+"WENDIGO: soooo hungry... i need more... soooo hungry... take me to your tribe so i might feast...",
+"easy"
+
+"kraken1",
+"Easily recognizable in almost all cultures nowadays, the Kraken is an undersea horror capable of reducing large ships to splinters. What sort of language does the word Kraken come from?",
+"Germanic",
+"Romanic",
+"Celtic",
+"Slavic",
+"images/KazumaKaneko-Kraken.jpg",
+"KRAKEN: *gurgle* *splash* *splash* *shriek* *splash* *gurgle* *splash*",
+"easy"
+
+"baykok1",
+"Described as 'Death' in The Song of Hiawatha, the Baykok is said to appear as an extremely emaciated figure, with thin translucent skin and glowing red points for eyes. It only preys upon warriors, attacking in order to feast on which organ?",
+"Liver",
+"Heart",
+"Brain",
+"Intestines",
+"images/KazumaKaneko-Baykok.jpg",
+"BAYKOK: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY AAAAAAAAAAYAAYAYAAAAAAA!",
+"hard"
+
+"itzamna1",
+"In Mayan mythology, Itzamna is the name of the creator deity and the lord of medicine. Which of these were not among the gifts Itzamna gave the Mayans?",
+"Medicine",
+"Drawing",
+"Writing",
+"Religion",
+"images/KazumaKaneko-Itzamna.jpg",
+"ITZAMNA: Hoho, there youngin'! You seem to have overstayed your welcome. Come with me and relax a while.",
+"hard"
+
+"amaterasu1",
+"Amaterasu is the Japanese sun goddess who rules over the High Plain of Heaven and her name means \"she who illuminates the heavens.\" From which god's left eye was she born?",
+"Izanagi",
+"Inazami",
+"Susano-O",
+"Tsukuyomi",
+"images/KazumaKaneko-Amaterasu.jpg",
+"AMATERASU: Why are you bothering me? Don't make me angry! I'll kill you then go back into that cave! ",
+"hard"
+
+"arahabaki1",
+"An ancient Japanese aboriginal god of the Jomon, Arahabaki was worshipped in Japan's North-Eastern regions. Who were his guardians and servants?",
+"Momunofu",
+"Oni",
+"Azumi",
+"Inugami",
+"images/KazumaKaneko-Arahabaki.jpg",
+"ARAHABAKI: I AM THE GOD OF LEGS, FORTIFICATION AND STEEL! QUIVER IN YOUR PANTS!",
+"easy"
+
+
+]
+      ,{
+            "name": "",
+            "img": "",
+            "quote": "",
+            "easy": {
+                  "q": "",
+                  "a": "",
+                  "h1": "",
+                  "h2": "",
+                  "h3": ""
+            },
+            "hard" : {
+                  "q": "",
+                  "a": "",
+                  "h1": "",
+                  "h2": "",
+                  "h3": ""
+            }
+      }
