@@ -26,6 +26,14 @@ var jumbleMngr,
 //start this puppy when the page is ready
 //by displaying the instructions and nothing else
 $(document).ready(function(){
+    var hiscoreCheck = getCookie('hiscore');
+    var lifeCheck = getCookie('life');
+    var magCheck = getCookie('mag');
+    if (hiscoreCheck != "" && hiscoreCheck != 0 && hiscoreCheck != null) hiscore = hiscoreCheck;
+    if(magCheck != "" && magCheck != null) {
+        $("#hiscore").html("Hiscore:<br/>HP "+lifeCheck+"%<br/>MAG "+magCheck);
+        $("#hiscore").show();
+    }
     jumbleMngr = $.getJSON( "data.json", function() {
         console.log( "success" );
     })
@@ -40,6 +48,33 @@ $(document).ready(function(){
         console.log( "complete" );
     });
 });
+
+//functions for adding/getting/deleting cookies
+//used for hiscore stats
+function createCookie(cname,cvalue,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = cname+"="+cvalue+expires+"; path=/";
+}
+
+function getCookie(cname) {
+    var cnameEQ = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(cnameEQ) == 0) return c.substring(cnameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(cname) {
+    createCookie(cname,"",-1);
+}
 
 //start menu for instructions while making sure
 //everything else hides
@@ -349,7 +384,11 @@ function youWin() {
     score = Math.round(((10-setHP)/10)*magnetite);
     if (score > hiscore) {
         hiscore = score;
-        $("#hiscore").html("Hiscore:<br/>HP "+(100-(setHP*10))+"%<br/>MAG "+magnetite);
+        var tempTag = "Hiscore:<br/>HP "+(100-(setHP*10))+"%<br/>MAG "+magnetite;
+        $("#hiscore").html(tempTag);
+        createCookie('hiscore',hiscore,7);
+        createCookie('life',(100-(setHP*10)),7);
+        createCookie('mag',magnetite,7);
     }
     $("#winner").show();
     $("#winned").text("You did it! Your remaining Lifeforce was "+(100-(setHP*10))+"% and you earned "+magnetite+" Magnetite for confronting your demons! Well Done! Press 'Enter' to Conquer Again...");
