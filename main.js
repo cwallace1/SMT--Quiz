@@ -23,16 +23,17 @@ var jumbleMngr,
     pointTimer,
     askedArray = [],
     dead = false;
+
 //start this puppy when the page is ready
 //by displaying the instructions and nothing else
 $(document).ready(function(){
-    var hiscoreCheck = getCookie('hiscore');
-    var lifeCheck = getCookie('life');
-    var magCheck = getCookie('mag');
-    if (hiscoreCheck != "" && hiscoreCheck != 0 && hiscoreCheck != null) hiscore = hiscoreCheck;
-    if(magCheck != "" && magCheck != null) {
-        $("#hiscore").html("Hiscore:<br/>HP "+lifeCheck+"%<br/>MAG "+magCheck);
-        $("#hiscore").show();
+    var hiscoreCheck = getCookie('hiscore'),
+        lifeCheck = getCookie('life'),
+        magCheck = getCookie('mag');
+    if (hiscoreCheck != "" && hiscoreCheck != 0 && hiscoreCheck != null) {
+        hiscore = hiscoreCheck;
+        $("#hiscore div").html("Hiscore:<br/>HP "+lifeCheck+"%<br/>MAG "+magCheck);
+        $("#hiscore div").show();
     }
     jumbleMngr = $.getJSON( "data.json", function() {
         console.log( "success" );
@@ -43,6 +44,7 @@ $(document).ready(function(){
     })
     .fail(function(data) {
         console.log( "error" );
+        console.log(data);
     })
     .always(function() {
         console.log( "complete" );
@@ -50,22 +52,23 @@ $(document).ready(function(){
 });
 
 //functions for adding/getting/deleting cookies
-//used for hiscore stats
+//used for semi-persistent hiscore stats (year long)
 function createCookie(cname,cvalue,days) {
     if (days) {
-        var date = new Date();
+        var date = new Date(),
+            expires = "; expires=";
         date.setTime(date.getTime()+(days*24*60*60*1000));
-        var expires = "; expires="+date.toGMTString();
+        expires += date.toGMTString();
     }
     else var expires = "";
     document.cookie = cname+"="+cvalue+expires+"; path=/";
 }
 
 function getCookie(cname) {
-    var cnameEQ = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
+    var cnameEQ = cname + "=",
+        carray = document.cookie.split(';');
+    for(var i=0;i < carray.length;i++) {
+        var c = carray[i];
         while (c.charAt(0)==' ') c = c.substring(1,c.length);
         if (c.indexOf(cnameEQ) == 0) return c.substring(cnameEQ.length,c.length);
     }
@@ -79,20 +82,26 @@ function eraseCookie(cname) {
 //start menu for instructions while making sure
 //everything else hides
 function startMenu() {
-    $("#newGame").hide();
+    $("#newGame div").hide();
     $("#winner").hide();
+    $("#sure").hide();
+    $("#choice").hide();
+    $("#container").hide();
+    $("#quiz").hide();
     $("#start").show();
     $(document).unbind("keydown");
     $(document).keydown(function(e){
         if (paused === false && !sureFlag && !winned && e.which == 13) {
-            $("#newGame").show();
+            $("#newGame div").show();
+            $("#container").show();
+            hpMode();
             letsMove();
             pickIt();
             moonIf();
             $("#start").hide();
         }
         else if (paused === true && e.which == 13) {
-            $("#newGame").show();
+            $("#newGame div").show();
             $("#start").hide();
             paused = false;
             letsMove();
@@ -129,10 +138,10 @@ function letsMove() {
 function move(direct) {
     letsMove();
     spot = 1;
-    if ($("#choice").next("span").hasClass("4")) spot = 4;
-    else if ($("#choice").next("span").hasClass("3")) spot = 3;
-    else if ($("#choice").next("span").hasClass("2")) spot = 2;
-    else if ($("#choice").next("span").hasClass("1")) spot = 1;
+    if ($("#choice").next("span").hasClass("this4")) spot = 4;
+    else if ($("#choice").next("span").hasClass("this3")) spot = 3;
+    else if ($("#choice").next("span").hasClass("this2")) spot = 2;
+    else if ($("#choice").next("span").hasClass("this1")) spot = 1;
     else {return;}
     if (direct == "up" && spot !== 1 && spot !== 3) spot --;
     else if (direct == "down" && spot !== 2 && spot !== 4) spot ++;
@@ -144,7 +153,9 @@ function move(direct) {
 //nifty, huh?
 function spotRemoval() {
     $("#choice").remove();
-    $("."+spot).before('<div id="choice" class="blink"><img src="images/right-select.png" /></div>');
+    $(".this"+spot).before('<div id="choice" class="blink"><img src="images/right-select.png" /></div>');
+    $(".choice").removeClass('choice');
+    $(".this"+spot).addClass('choice');
 }
 //pick the demon using the length of the
 //demonic array! check against another array
@@ -156,6 +167,7 @@ function pickIt(){
     order = randomInt(4);
     letsDecide(whichOne);
     $("#choice").hide();
+    $(".choice").removeClass('choice');
 }
 //random number generator that can be controlled
 //based on questions above
@@ -166,17 +178,19 @@ function randomInt(max) {
 function letsDecide(whiching) {
     hardFlag = Math.random() < 0.5 ? "easy" : "hard" ;
     $("#quiz").find("p").text(hardFlag == "easy" ? jumbleMngr[whiching].easy.q : jumbleMngr[whiching].hard.q);
-    $("."+order).text(hardFlag == "easy" ? jumbleMngr[whiching].easy.a : jumbleMngr[whiching].hard.a);
-    $("."+order).siblings("span").text(hardFlag == "easy" ? jumbleMngr[whiching].easy.h1 : jumbleMngr[whiching].hard.h1);
-    $("."+order).parent("div").siblings("div").find("span").first("span").text(hardFlag == "easy" ? jumbleMngr[whiching].easy.h2 : jumbleMngr[whiching].hard.h2);
-    $("."+order).parent("div").siblings("div").find("span").last("span").text(hardFlag == "easy" ? jumbleMngr[whiching].easy.h3 : jumbleMngr[whiching].hard.h3);
-    $(".hero").attr("src", jumbleMngr[whiching].img);
+    $(".this"+order).text(hardFlag == "easy" ? jumbleMngr[whiching].easy.a : jumbleMngr[whiching].hard.a);
+    $(".this"+order).siblings("span").text(hardFlag == "easy" ? jumbleMngr[whiching].easy.h1 : jumbleMngr[whiching].hard.h1);
+    $(".this"+order).parent("div").siblings("div").find("span").first("span").text(hardFlag == "easy" ? jumbleMngr[whiching].easy.h2 : jumbleMngr[whiching].hard.h2);
+    $(".this"+order).parent("div").siblings("div").find("span").last("span").text(hardFlag == "easy" ? jumbleMngr[whiching].easy.h3 : jumbleMngr[whiching].hard.h3);
+    $("#hero").attr("src", jumbleMngr[whiching].img);
+    $("#taunt").find("h3").text(jumbleMngr[whiching].name+":");
     $("#taunt").find("span").text(jumbleMngr[whiching].quote);
 }
 //remove the taunt! start the timer!
 function closeTaunt() {
     tauntFlag=false;
     $("#taunt").hide();
+    $("#quiz").show();
     $("#choice").show();
     pointTimer = new Date();
 }
@@ -188,7 +202,7 @@ function makeChoice() {
     var difficultyMod = 0;
     if (hardFlag === "easy") difficultyMod = 1000;
     else if (hardFlag === "hard") difficultyMod = 2000;
-    located = $("#choice").next("span").hasClass(order);
+    located = $("#choice").next("span").hasClass("this"+order);
     diffTimer = difficultyMod -Math.ceil((diffTimer - pointTimer)/30);
     if (diffTimer < difficultyMod/10) diffTimer = (difficultyMod/10);
     if (located === true) {
@@ -196,7 +210,7 @@ function makeChoice() {
         $("#mag").text("MAG "+magnetite);
         splatIt(false);
     }
-    else if (!located) {
+    else {
         hpDecrement();
     }
 }
@@ -214,8 +228,7 @@ function hpDecrement() {
 //function for hp bar. dont get it to zero!
 //you will dead!
 function hpMode() {
-    $("#lost").attr("style", "width: "+(setHP*7)+"px; background-color: #a82244; position: relative; right: -"+(70-(setHP*7))+"px;");
-    $("#hitpoints").attr("style", "width: "+(70-(setHP*7))+"px; background-color: #22a844; margin-left: 5px;");
+    $("#lost").attr("style", "--lost: "+(setHP)+";");
 }
 //controls the popup on success or failure or
 // dead. don't dead! the popup not worth it!
@@ -232,7 +245,8 @@ function splatIt(splat) {
         splatter = "conquered.png";
     }
     $("#splat").attr("src", "images/"+splatter);
-    $("#splat").toggle();
+    $("#splat").show();
+    console.log('better be showing that splat');
     splatFlag = true;
 }
 //closes splat popup and increments the
@@ -240,7 +254,7 @@ function splatIt(splat) {
 //the 15th floor, you win!
 function closeSplat(){
     $("#splat").attr("src", "");
-    $("#splat").toggle();
+    $("#splat").hide();
     spot = 1;
     spotRemoval();
     if (!dead) {
@@ -298,29 +312,12 @@ function sureMove(direct) {
         return;
     }
 }
-//confirms their choice. please choose no!
-function confirmReset() {
-    if (sureSpot === "yes") resetAll();
-    else if (sureSpot === "no") sureCancel();
-}
-//if they cancel their new game this function
-//happens. and i happy inside.
-function sureCancel() {
-    sureFlag = false;
-    sureSpot = "yes";
-    $("#sure").hide();
-    $("#n").removeClass("blink");
-    $("#y").addClass("blink");
-    letsMove();
-    if (!tauntFlag) $("#choice").show();
-    else { $("#taunt").show(); }
-}
 //resets everything. really.
 //also checks to see if you won and shows
 //a hiscore if you did! try to beat it!
 //dont worry, it wont reset!
 function resetAll() {
-    if (winned === true) $("#hiscore").show();
+    if (winned === true) $("#hiscore div").show();
     var len = askedArray.length;
     while (len--) {
         askedArray.shift();
@@ -354,6 +351,7 @@ function resetSome() {
     splatFlag = false;
     sureFlag = false;
     $("#taunt").show();
+    $("#quiz").hide();
     moonIf();
     pickIt();
 }
@@ -385,11 +383,11 @@ function youWin() {
     if (score > hiscore) {
         hiscore = score;
         var tempTag = "Hiscore:<br/>HP "+(100-(setHP*10))+"%<br/>MAG "+magnetite;
-        $("#hiscore").html(tempTag);
-        createCookie('hiscore',hiscore,7);
-        createCookie('life',(100-(setHP*10)),7);
-        createCookie('mag',magnetite,7);
+        $("#hiscore div").html(tempTag);
+        createCookie('hiscore',hiscore,365);
+        createCookie('life',(100-(setHP*10)),365);
+        createCookie('mag',magnetite,365);
     }
     $("#winner").show();
-    $("#winned").text("You did it! Your remaining Lifeforce was "+(100-(setHP*10))+"% and you earned "+magnetite+" Magnetite for confronting your demons! Well Done! Press 'Enter' to Conquer Again...");
+    $("#winned").text("You did it! Your remaining Lifeforce was "+(100-(setHP*10))+"% and you earned "+magnetite+" Magnetite for confronting your demons! Well Done! Press 'Enter' or tap/click here to Conquer Again...");
 }

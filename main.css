@@ -1,221 +1,226 @@
-* {
-    line-height: 1.1em;
+:root {
+    --gutter: min(8vw, 8vh);
+    --lgfont: min(7vw, 7vh);
+    --strong: min(5vw, 5vh);
+    --mdfont: min(3vw, 3vh);
+    --smfont: min(2.5vw, 2.5vh);
+    --border: min(.5vw, .5vh);
+    --black: #333333;
+    --charcoal: #666666;
+    --grey: #afafaf;
+    --white: #dddddd;
+    --orange: #ee8822;
+    --red: #971515;
+    --green: #22a844;
+    --blood: #a82244;
+}
+
+body {
+    background: var(--white);
+    color: var(--charcoal);
+    font-family: Lucidatypewriter, monospace;
+    font-size: var(--mdfont);
+    line-height: calc(var(--mdfont)*1.1);
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    font-family: Lucidatypewriter, monospace;
-    color: #666666;
-    display: inline-block;
-    cursor: none;
 }
-head, script {
-    display: none;
+
+h1, h2 {
+    font-size: var(--lgfont);
+    line-height: calc(var(--lgfont)*1.1);;
 }
-body {
-    width:100%;
+
+h1 {
+    flex: 3 1 0px;
 }
+
+h3 {
+    font-size: var(--strong);
+    line-height: var(--strong);
+    margin: 0;
+    text-transform: uppercase;
+}
+
 header {
-    margin: auto;
-    width: 100%;
-    height: auto;
-    background-color: #000000;
-    position: relative;
-    top: 0;
-    text-align: center;
-    padding: 25px 0;
-    border-bottom: #666666 solid 5px;
+    align-items: center;
+    background: var(--charcoal);
+    border-bottom: var(--border) solid var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
 }
-header h1 {
-    font-size: 50px;
+
+#hiscore, #newGame {
+    flex: 1 1 0px;
+    margin: calc(var(--smfont)/2);
 }
-header span {
-    position: absolute;
-    right: 50px;
-    top: 45px;
-    font-size: 24px;
-    width: 181px;
-    background-color: #dddddd;
-    border: #666666 solid 3px;
-    padding: 8px;
-    border-radius: 3px;
-    color: #000000;
-    display: none;
-}
-#hiscore {
-    left: 50px;
-    top: 32px;
-}
-#winned {
-    font-size: 60px;
-    width: 85%;
-    color: #971515;
-    margin-top: 25px;
-}
-#start {
-    border-bottom: #666666 solid 5px;
-}
-#start, #winner {
-    position: absolute;
-    width: 100%;
-    background: #dddddd;
-    height: 620px;
-    z-index: 5;
-    text-align: center;
-    padding-top: 15px;
-}
-#start h2 {
-    display: block;
-    font-size: 50px;
-}
-#start p {
-    font-size: 26px;
-    width: 85%;
-    margin-top: 25px;
-}
-#start span {
-    font-size: 26px;
-    color: #ee8822;
-}
-#container {
-    line-height: 18px;
-    position: relative;
-    width: 100%;
-}
-#sure {
-    position: absolute;
-    z-index: 2;
-    width: 44%;
-    left: 25%;
-    border: #dddddd solid 1px;
-    top: 150px;
-    text-align: center;
-    font-size: 48px;
-    padding: 115px 3%;
-    background-color: #000000;
-    color: #dddddd;
-    display: none;
-}
-#sure span {
-    font-size: 48px;
-    color: #dddddd;
-}
-#splat {
-    width: 415px;
-    display: none;
-    height: auto;
-    position: absolute;
-    z-index: 1;
-    left: 33%;
-    top: -31px;
-}
-#phase, #points {
-    border: #666666 solid 2px;
-    width: 95px;
-    height: 80px;
-    background-color: #dddddd;
-    position: absolute;
-    top:20px;
-    display: inline-block;
-    padding: 15px;
-    line-height: 2em;
-}
-#phase {
-    left: 10px;
-}
-#points {
-    right: 10px;
-}
-#hitpoints {
-    width: 70px;
-    background-color: #22a844;
-    margin-left: 5px;
-}
-#lost {
-    width: 0px;
-    background-color: #a82244;
-    position: relative;
-    right: -63px;
-}
-#main {
-    width: 100%;
-}
-br {
-    clear: both;
-}
-figure {
-    width: 100%;
-    text-align: center;
-}
-.hero {
-    width: 500px;
-    height: auto;
-}
-#taunt {
-    background-color: #666666;
-    height: auto;
-    width: 75%;
-    min-width: 750px;
-    min-height: 200px;
-    text-align: left;
-    padding: 15px 2%;
-    display: block;
-    position: absolute;
-    top: 368px;
-    right: 10%;
-    z-index: 1;
-    border: #000000 solid 5px;
-}
-#taunt span, #taunt p {
-    color: #dddddd;
-    display: inline;
-    font-size: 48px;
-}
-footer {
-    background-color: #dddddd;
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    position: relative;
-    bottom: 0;
-    padding: 25px 0;
-    text-align: center;
-    min-height: 200px;
-    border-top: #666666 solid 5px;
-    border-bottom: #666666 solid 5px;
-}
-footer p {
-    font-size: 26px;
-    width: 85%;
-}
-#taunt-esc {
-    height: auto;
-    width: 35px;
-    margin-left: 35px;
-}
-#choice img {
-    height: auto;
-    width: 20px;
-    margin-right: 25px;
-}
-#answers {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 25px;
-}
-#answers-left, #answers-right {
-    display: inline-block;
+
+#newGame {
     text-align: right;
-    margin-right:2%;
 }
-#answers-left, #answers-right {
-    width: 30%;
-    min-width: 375px;
+
+#hiscore div, #newGame div, #phase, #points {
+    background: var(--white);
+    border: var(--border) solid var(--black);
+    border-radius: var(--border);
+    color: var(--charcoal);
+    display: inline-block;
+    font-size: var(--smfont);
+    padding: calc(var(--smfont)/2);
+    text-align: left;
 }
+
+#newGame div {
+    cursor: pointer;
+}
+
+#newGame div:hover, #newGame div:active, #newGame div:focus {
+    border-color: var(--orange);
+    outline: none;
+}
+
+#start, #quiz {
+    margin: 0 auto;
+    width: 90vw;
+}
+
+#start span {
+    color: var(--orange);
+}
+
+#startBtn {
+    background: var(--white);
+    border: var(--border) solid var(--black);
+    border-radius: var(--border);
+    color: var(--charcoal);
+    display: inline-block;
+    font-size: var(--smfont);
+    padding: calc(var(--smfont)/2);
+}
+
+#startBtn:hover, #startBtn:active, #startBtn:focus {
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+    outline: none;
+}
+
+#bottom {
+    text-align: center;
+}
+
 #answers span {
-    font-size: 25px;
-    line-height: 1.25em;
+    cursor: pointer;
 }
+
+#container {
+    position: relative;
+}
+
+#phase {
+    left: var(--smfont);
+    position: absolute;
+    top: var(--smfont);
+    width: auto;
+}
+
+#points {
+    left: auto;
+    min-width: 10vw;
+    position: absolute;
+    right: var(--smfont);
+    top: var(--smfont);
+    width: auto;
+}
+
+#hitpoints {
+    background: var(--green);
+    float: left;
+    width: 100%;
+}
+
+#lost {
+    background: var(--red);
+    float: right;
+    width: calc(100% * var(--lost)/10);
+
+}
+
+#main {
+    text-align: center;
+}
+
+#hero {
+    display: block;
+    margin: 0 auto;
+    max-height: 50vh;
+    max-width: 95vw;
+    width: auto;
+}
+
+#taunt {
+    background: var(--charcoal);
+    border: var(--border) solid var(--black);
+    color: var(--white);
+    bottom: 0;
+    cursor: pointer;
+    left: 50%;
+    padding: var(--mdfont);
+    position: absolute;
+    text-align: left;
+    transform: translateX(-50%) translateY(90%);
+    width: 90vw;
+}
+
+#taunt:hover, #taunt:active, #taunt:focus {
+    border-color: var(--grey);
+    outline: none;
+}
+
+#taunt span {
+    display: inline-block;
+    line-height: var(--mdfont);
+    margin-right: var(--strong);;
+}
+
+#taunt-esc {
+    bottom: var(--mdfont);
+    position: absolute;
+    right: var(--mdfont);
+    width: var(--strong);
+}
+
+#answers-left, #answers-right {
+    display: inline-block;
+    margin-left: var(--gutter);
+    margin: 0 auto;
+    position: relative;
+    text-align: right;
+    width: calc(49% - var(--gutter));
+}
+
+#choice {
+    display: inline-block;
+}
+
+#choice img {
+    height: var(--smfont);
+    margin-right: calc(2 * var(--border));
+    transform: translateY(20%);
+    width: auto;
+}
+
+#splat {
+    bottom: 0;
+    left: 50%;
+    max-height: 60vh;
+    max-width: 95vw;
+    position: absolute;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 2;
+}
+
 @-webkit-keyframes 'blink' {
     0% {
         opacity:1;
@@ -227,33 +232,36 @@ footer p {
         opacity:1;
     }
 }
+
 .blink {
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-    -webkit-animation-direction: normal;
     -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-name: blink;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-direction: normal;
     -moz-animation-duration: 2s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-name: blink;
-    -moz-animation-timing-function: ease-in-out;
-    -o-animation-direction: normal;
     -o-animation-duration: 2s;
-    -o-animation-iteration-count: infinite;
-    -o-animation-name: blink;
-    -o-animation-timing-function: ease-in-out;
-    -ms-animation-direction: normal;
     -ms-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
+    -o-animation-direction: normal;
+    -ms-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
     -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+    -moz-animation-name: blink;
+    -o-animation-name: blink;
     -ms-animation-name: blink;
+    animation-name: blink;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
     -ms-animation-timing-function: ease-in-out;
-}
-@media screen and (max-width: 1000px){
-    body, header, footer, #start, #container{width: 1000px;}
+    animation-timing-function: ease-in-out;
 }
