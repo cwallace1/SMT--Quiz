@@ -89,23 +89,16 @@ function startMenu() {
     $("#container").hide();
     $("#quiz").hide();
     $("#start").show();
+    $("#splat").attr("src", "");
+    $("#splat").hide();
     $(document).unbind("keydown");
     $(document).keydown(function(e){
-        if (paused === false && !sureFlag && !winned && e.which == 13) {
-            $("#newGame div").show();
-            $("#container").show();
-            hpMode();
-            letsMove();
-            pickIt();
-            moonIf();
-            $("#start").hide();
+        if (e.which == 13) {
+            startGame();
         }
-        else if (paused === true && e.which == 13) {
-            $("#newGame div").show();
-            $("#start").hide();
-            paused = false;
-            letsMove();
-        }
+    });
+    $("#startBtn").click(function() {
+        startGame();
     });
 }
 //start watching for arrows+wasd keys and enter
@@ -114,7 +107,6 @@ function startMenu() {
 function letsMove() {
     $(document).unbind("keydown");
     $(document).keydown(function(e){
-        e.preventDefault();
         if (!paused && !sureFlag && e.which == 9) {
             sureResetAll();
             $("#sure").show();
@@ -125,13 +117,16 @@ function letsMove() {
             paused = true;
             startMenu();
         }
-        if (!tauntFlag && !sureFlag  && e.which == 37 || e.which == 65) move("left");
-        else if (!tauntFlag && !sureFlag && e.which == 39 || e.which == 68) move("right");
-        else if (!tauntFlag && !sureFlag  && e.which == 38 || e.which == 87) move("up");
-        else if (!tauntFlag && !sureFlag  && e.which == 40 || e.which == 83) move("down");
+        if (!tauntFlag && !sureFlag  && (e.which == 37 || e.which == 65)) move("left");
+        else if (!tauntFlag && !sureFlag && (e.which == 39 || e.which == 68)) move("right");
+        else if (!tauntFlag && !sureFlag  && (e.which == 38 || e.which == 87)) move("up");
+        else if (!tauntFlag && !sureFlag  && (e.which == 40 || e.which == 83)) move("down");
         if ( tauntFlag && !sureFlag && e.which == 13) closeTaunt();
         else if (splatFlag) closeSplat();
         else if (!tauntFlag && !sureFlag && !dead && e.which == 13) makeChoice();
+    });
+    $("#taunt").click(function() {
+        closeTaunt();
     });
 }
 //lets define that movement!
@@ -246,7 +241,6 @@ function splatIt(splat) {
     }
     $("#splat").attr("src", "images/"+splatter);
     $("#splat").show();
-    console.log('better be showing that splat');
     splatFlag = true;
 }
 //closes splat popup and increments the
@@ -375,7 +369,7 @@ function moonIf() {
 function youWin() {
     $(document).unbind("keydown");
     $(document).keydown(function(e){
-        if (e.which == 13) resetAll();
+        if (e.which == 13) startGame();
     });
     dead = true;
     winned = true;
@@ -389,5 +383,21 @@ function youWin() {
         createCookie('mag',magnetite,365);
     }
     $("#winner").show();
-    $("#winned").text("You did it! Your remaining Lifeforce was "+(100-(setHP*10))+"% and you earned "+magnetite+" Magnetite for confronting your demons! Well Done! Press 'Enter' or tap/click here to Conquer Again...");
+    $("#container").hide();
+    $("#quiz").hide();
+    $("#winned").html("You did it! Your remaining Lifeforce was "+(100-(setHP*10))+"% and you earned "+magnetite+" Magnetite for confronting your demons! Well Done! Press <span>'Enter'</span> or tap/click here to Conquer Again...");
+    if($("#restartBtn").length<1) $("#winner").append('<button id="restartBtn">Restart Journey</button>');
+    $("#restartBtn").click(function() {
+        startGame();
+    });
 }
+function startGame() {
+    $("#newGame div").show();
+    $("#newGame div").click(function() {
+        startMenu();
+    });
+    $("#container").show();
+    resetAll();
+    $("#start").hide();
+    $("#winner").hide();
+};

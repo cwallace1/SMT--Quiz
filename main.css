@@ -32,6 +32,7 @@ h1, h2 {
 
 h1 {
     flex: 3 1 0px;
+    text-align: center;
 }
 
 h3 {
@@ -79,26 +80,27 @@ header {
     outline: none;
 }
 
-#start, #quiz {
-    margin: 0 auto;
+#start, #quiz, #winner {
+    margin: 0 auto var(--gutter);
     width: 90vw;
 }
 
-#start span {
+#start span, #winner span {
     color: var(--orange);
 }
 
-#startBtn {
+#startBtn, #restartBtn {
     background: var(--white);
     border: var(--border) solid var(--black);
     border-radius: var(--border);
     color: var(--charcoal);
     display: inline-block;
     font-size: var(--smfont);
+    margin-top: calc(var(--smfont)/2);
     padding: calc(var(--smfont)/2);
 }
 
-#startBtn:hover, #startBtn:active, #startBtn:focus {
+#startBtn:hover, #startBtn:active, #startBtn:focus, #restartBtn:hover, #restartBtn:active, #restartBtn:focus {
     background: var(--black);
     color: var(--white);
     cursor: pointer;
@@ -110,7 +112,10 @@ header {
 }
 
 #answers span {
+    border: var(--border) solid transparent;
     cursor: pointer;
+    font-size: var(--smfont);
+    padding: var(--border);
 }
 
 #container {
@@ -206,8 +211,12 @@ header {
 #choice img {
     height: var(--smfont);
     margin-right: calc(2 * var(--border));
-    transform: translateY(20%);
+    transform: translateY(15%);
     width: auto;
+}
+
+#choice + span {
+    border-color: var(--orange);
 }
 
 #splat {
@@ -219,6 +228,10 @@ header {
     transform: translateX(-50%);
     width: auto;
     z-index: 2;
+}
+
+#winned {
+    margin-top: var(--gutter);
 }
 
 @-webkit-keyframes 'blink' {
