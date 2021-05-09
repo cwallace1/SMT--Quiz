@@ -234,6 +234,23 @@ header {
     margin-top: var(--gutter);
 }
 
+#sure {
+    background: rgba(0,0,0,.85);
+    border-radius: var(--border);
+    border: var(--border) solid var(--black);
+    color: var(--white);
+    left: 50%;
+    padding: calc(var(--gutter)*2);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#sure span:hover {
+    cursor: pointer;
+}
+
 @-webkit-keyframes 'blink' {
     0% {
         opacity:1;

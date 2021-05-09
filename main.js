@@ -10,6 +10,7 @@ var jumbleMngr,
     winned = false,
     waneFlag = true,
     paused = false,
+    pauseTimer = 0;
     hardFlag = "easy",
     floorCounter = 0,
     hiscore = 0,
@@ -107,15 +108,9 @@ function startMenu() {
 function letsMove() {
     $(document).unbind("keydown");
     $(document).keydown(function(e){
-        if (!paused && !sureFlag && e.which == 9) {
-            sureResetAll();
-            $("#sure").show();
-            $("#choice").hide();
-            sureFlag = true;
-        }
-        if (e.which == 27 && !paused) {
-            paused = true;
-            startMenu();
+        if (!sureFlag && (e.which == 9 || e.which == 27)) {
+            e.preventDefault();
+            sureCheck();
         }
         if (!tauntFlag && !sureFlag  && (e.which == 37 || e.which == 65)) move("left");
         else if (!tauntFlag && !sureFlag && (e.which == 39 || e.which == 68)) move("right");
@@ -183,7 +178,7 @@ function letsDecide(whiching) {
 }
 //remove the taunt! start the timer!
 function closeTaunt() {
-    tauntFlag=false;
+    tauntFlag = false;
     $("#taunt").hide();
     $("#quiz").show();
     $("#choice").show();
@@ -193,8 +188,12 @@ function closeTaunt() {
 //good things happen if answer right!
 //bad things happen if answer wrong!
 function makeChoice() {
-    var diffTimer = new Date();
-    var difficultyMod = 0;
+    var diffTimer = new Date(),
+        difficultyMod = 0;
+    if (pauseTimer > 0) {
+        diffTimer += -1 * pauseTimer;
+        pauseTimer = 0;
+    }
     if (hardFlag === "easy") difficultyMod = 1000;
     else if (hardFlag === "hard") difficultyMod = 2000;
     located = $("#choice").next("span").hasClass("this"+order);
@@ -276,18 +275,53 @@ function askedAlready(newQ) {
         }
     }
 }
+//check if the user is sure they want to start over
+function sureCheck() {
+    $("#sure").show();
+    $("#choice").hide();
+    sureFlag = true;
+    sureResetAll();
+}
+//function to close the sure modal
+function sureCancel(pauseDuration) {
+    var tempTime = new Date();
+    pauseTimer += tempTime - pauseDuration;
+    $("#sure").hide();
+    $("#sure").attr("tabindex",-1);
+    $("#choice").show();
+    $("#answers").focus();
+    sureFlag = false;
+    letsMove();
+}
 //ask user if they're sure they want to start
-//all over after they press tab mid-game
+//all over after they press tab/esc mid-game
 function sureResetAll() {
+    paused = true;
+    var tempTime = new Date();
+    $("#sure").attr("tabindex",0);
+    $("#sure").focus();
     $(document).unbind("keydown");
     $(document).keydown(function(e){
-        if (e.which == 78) {
-            sureCancel();
+        if (e.which == 78 || (e.which == 13 && sureSpot === "no")) {
+            sureCancel(tempTime);
         }
-        if (e.which == 89) resetAll();
+        if (e.which == 89 || (e.which == 13 && sureSpot === "yes")) resetAll();
         if (e.which == 39 || e.which == 68) sureMove("sureRight");
         else if (e.which == 37 || e.which == 65) sureMove("sureLeft");
-        if (e.which == 13) confirmReset();
+        $("#sure span#y").hover(function() {
+            sureSpot = "no";
+            sureMove("sureLeft");
+            $("#sure span#y").click(function() {
+                resetAll();
+            });
+        })
+        $("#sure span#n").hover(function() {
+            sureSpot = "yes";
+            sureMove("sureRight");
+            $("#sure span#n").click(function() {
+                sureCancel(tempTime);
+            });
+        })
     });
 }
 //movement for the sureness arrow keys and wasd.
@@ -394,7 +428,7 @@ function youWin() {
 function startGame() {
     $("#newGame div").show();
     $("#newGame div").click(function() {
-        startMenu();
+        sureCheck();
     });
     $("#container").show();
     resetAll();
