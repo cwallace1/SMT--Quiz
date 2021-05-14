@@ -21,7 +21,7 @@ var jumbleMngr,
     currentFloor = 651,
     moonCount = 7,
     sureSpot = "yes",
-    pointTimer,
+    pointTimer = 0,
     askedArray = [],
     dead = false;
 
@@ -206,7 +206,7 @@ function makeChoice() {
     }
     else {
         hpDecrement();
-    }
+    };
 }
 //decrease hitpoints if wrongly answered
 //and reset game if dead. try not to dead!
@@ -305,14 +305,14 @@ function sureResetAll() {
         if (e.which == 78 || (e.which == 13 && sureSpot === "no")) {
             sureCancel(tempTime);
         }
-        if (e.which == 89 || (e.which == 13 && sureSpot === "yes")) resetAll();
+        if (e.which == 89 || (e.which == 13 && sureSpot === "yes")) resetAll(true);
         if (e.which == 39 || e.which == 68) sureMove("sureRight");
         else if (e.which == 37 || e.which == 65) sureMove("sureLeft");
         $("#sure span#y").hover(function() {
             sureSpot = "no";
             sureMove("sureLeft");
             $("#sure span#y").click(function() {
-                resetAll();
+                resetAll(true);
             });
         })
         $("#sure span#n").hover(function() {
@@ -344,7 +344,7 @@ function sureMove(direct) {
 //also checks to see if you won and shows
 //a hiscore if you did! try to beat it!
 //dont worry, it wont reset!
-function resetAll() {
+function resetAll(bool) {
     if (winned === true) $("#hiscore div").show();
     var len = askedArray.length;
     while (len--) {
@@ -367,6 +367,7 @@ function resetAll() {
     hpMode();
     letsMove();
     resetSome();
+    if(bool === true) startMenu();
 }
 //resets most things for the next question
 //and sets the moon ahead a stage and picks
